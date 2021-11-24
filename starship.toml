@@ -1,0 +1,17 @@
+[character]                            # The name of the module we are configuring is "character"
+success_symbol = "[↪](bold green)"     # The "success_symbol" segment is being set to "➜" with the color "bold green"
+error_symbol = "[☓](bold red)"
+
+[gcloud]
+symbol = "️🇬️ "
+disabled = true
+[gcloud.region_aliases]
+us-east1 = "ue1"
+us-central1 = "uc1"
+asia-northeast1 = "an1"
+
+[aws]
+disabled = true
+
+[kubernetes]
+disabled = true
