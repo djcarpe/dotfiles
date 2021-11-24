@@ -19,6 +19,7 @@ return require("packer").startup(function(use)
     use("preservim/nerdtree")
     use("junegunn/fzf")
     use("junegunn/fzf.vim")
+    use("yuki-yano/fzf-preview.vim")
 
     -- Autocomplete and snippets
     use("hrsh7th/nvim-cmp")
@@ -57,7 +58,10 @@ return require("packer").startup(function(use)
     })
 
     use({
-        "akinsho/bufferline.nvim"
+        "akinsho/bufferline.nvim",
+        config = function()
+            require("plugins.bufferline_config")
+        end
     })
 
     use({

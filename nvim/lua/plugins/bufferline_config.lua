@@ -2,6 +2,8 @@ local bufferline = require("bufferline")
 
 local config = {
     options = {
+        close_command = "bdelete! %d",
+        left_mouse_command = "buffer %d",
         offsets = {{
             filetype = "NvimTree",
             text = "File Explorer",
