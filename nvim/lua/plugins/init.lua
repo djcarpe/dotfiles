@@ -76,6 +76,27 @@ return require("packer").startup(function(use)
         end
     })
 
+    -- Git Plugin(s)
+    use({
+       "tanvirtin/vgit.nvim",
+       event = "BufWinEnter",
+         requires = {
+          "nvim-lua/plenary.nvim",
+       },
+       config = function()
+	    require("vgit").setup({
+		    hls = require("vgit").themes.tokyonight,
+	    })
+       end,
+    })
+
+    use({
+       "pwntester/octo.nvim",
+          config = function()
+	    require("octo").setup()
+       end,
+    })
+
     -- Automatically set up your configuration after cloning packer.nvim
     -- Put this at the end after all plugins
     if packer_bootstrap then

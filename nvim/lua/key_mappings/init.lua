@@ -29,3 +29,10 @@ map("n", "<Leader><Leader>mn", ":colorscheme monokai<CR>", opts)
 map("n", "gt", ":BufferLineCycleNext<CR>", opts)
 map("n", "gT", ":BufferLineCyclePrev<CR>", opts)
 
+-- VGit
+map("n", "<leader>gb", "<cmd>VGit buffer_blame_preview<cr>", opts)
+map("n", "<leader>gp", "<cmd>VGit buffer_diff_preview<cr>", opts)
+map("n", "<leader>gd", "<cmd>VGit project_diff_preview<cr>", opts)
+map("n", "<leader>gs", "<cmd>VGit buffer_hunk_stage<cr>", opts)
+map("n", "<leader>gh", "<cmd>VGit project_hunks_qf<cr>", opts)
+
