@@ -57,7 +57,7 @@ end
 time([[Luarocks path setup]], false)
 time([[try_loadstring definition]], true)
 local function try_loadstring(s, component, name)
-  local success, result = pcall(loadstring(s))
+  local success, result = pcall(loadstring(s), name, _G.packer_plugins[name])
   if not success then
     vim.schedule(function()
       vim.api.nvim_notify('packer.nvim: Error running ' .. component .. ' for ' .. name .. ': ' .. result, vim.log.levels.ERROR, {})
@@ -114,6 +114,11 @@ _G.packer_plugins = {
     loaded = true,
     path = "/Users/djcarpe/.local/share/nvim/site/pack/packer/start/gruvbox",
     url = "https://github.com/morhetz/gruvbox"
+  },
+  ["lightspeed.nvim"] = {
+    loaded = true,
+    path = "/Users/djcarpe/.local/share/nvim/site/pack/packer/start/lightspeed.nvim",
+    url = "https://github.com/ggandor/lightspeed.nvim"
   },
   ["lspkind-nvim"] = {
     loaded = true,
@@ -201,6 +206,10 @@ _G.packer_plugins = {
 }
 
 time([[Defining packer_plugins]], false)
+-- Config for: octo.nvim
+time([[Config for octo.nvim]], true)
+try_loadstring("\27LJ\2\n2\0\0\3\0\3\0\0066\0\0\0'\2\1\0B\0\2\0029\0\2\0B\0\1\1K\0\1\0\nsetup\tocto\frequire\0", "config", "octo.nvim")
+time([[Config for octo.nvim]], false)
 -- Config for: bufferline.nvim
 time([[Config for bufferline.nvim]], true)
 try_loadstring("\27LJ\2\n9\0\0\3\0\2\0\0046\0\0\0'\2\1\0B\0\2\1K\0\1\0\30plugins.bufferline_config\frequire\0", "config", "bufferline.nvim")
@@ -221,10 +230,6 @@ time([[Config for nvim-treesitter]], false)
 time([[Config for nvim-lspconfig]], true)
 try_loadstring("\27LJ\2\n2\0\0\3\0\2\0\0046\0\0\0'\2\1\0B\0\2\1K\0\1\0\23plugins.lsp_config\frequire\0", "config", "nvim-lspconfig")
 time([[Config for nvim-lspconfig]], false)
--- Config for: octo.nvim
-time([[Config for octo.nvim]], true)
-try_loadstring("\27LJ\2\n2\0\0\3\0\3\0\0066\0\0\0'\2\1\0B\0\2\0029\0\2\0B\0\1\1K\0\1\0\nsetup\tocto\frequire\0", "config", "octo.nvim")
-time([[Config for octo.nvim]], false)
 vim.cmd [[augroup packer_load_aucmds]]
 vim.cmd [[au!]]
   -- Event lazy-loads

@@ -20,6 +20,7 @@ return require("packer").startup(function(use)
     use("junegunn/fzf")
     use("junegunn/fzf.vim")
     use("yuki-yano/fzf-preview.vim")
+    use("ggandor/lightspeed.nvim")
 
     -- Autocomplete and snippets
     use("hrsh7th/nvim-cmp")
