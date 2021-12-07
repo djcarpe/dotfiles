@@ -35,6 +35,7 @@ return require("packer").startup(function(use)
     use("onsails/lspkind-nvim")
 
     -- LSP Configs
+    use("google/vim-jsonnet")
     use({
         "neovim/nvim-lspconfig",
         config = function()
@@ -59,10 +60,8 @@ return require("packer").startup(function(use)
     })
 
     use({
-        "akinsho/bufferline.nvim",
-        config = function()
-            require("plugins.bufferline_config")
-        end
+      "nvim-telescope/telescope.nvim",
+      requires = { { "nvim-lua/plenary.nvim" } },
     })
 
     use({
