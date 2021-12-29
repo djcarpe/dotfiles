@@ -42,3 +42,6 @@ map("n", "<leader>gd", "<cmd>VGit project_diff_preview<cr>", opts)
 map("n", "<leader>gs", "<cmd>VGit buffer_hunk_stage<cr>", opts)
 map("n", "<leader>gh", "<cmd>VGit project_hunks_qf<cr>", opts)
 
+-- search box
+map("n", "<leader>s", "<cmd>lua require('searchbox').incsearch()<cr>", opts)
+map("n", "<leader>r", "<cmd>lua require('searchbox').replace({confirm = 'menu'})<cr>", opts)

@@ -21,6 +21,7 @@ return require("packer").startup(function(use)
     use("junegunn/fzf.vim")
     use("yuki-yano/fzf-preview.vim")
     use("ggandor/lightspeed.nvim")
+    use("sunjon/shade.nvim")
 
     -- Autocomplete and snippets
     use("hrsh7th/nvim-cmp")
@@ -84,9 +85,7 @@ return require("packer").startup(function(use)
           "nvim-lua/plenary.nvim",
        },
        config = function()
-	    require("vgit").setup({
-		    hls = require("vgit").themes.tokyonight,
-	    })
+	    require("vgit").setup({})
        end,
     })
 
@@ -95,6 +94,13 @@ return require("packer").startup(function(use)
           config = function()
 	    require("octo").setup()
        end,
+    })
+
+    use({
+      "VonHeikemen/searchbox.nvim",
+      requires = {
+        {"MunifTanjim/nui.nvim"},
+      },
     })
 
     -- Automatically set up your configuration after cloning packer.nvim
