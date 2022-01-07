@@ -1,27 +1,21 @@
-require("plugins")
-require("key_mappings")
-
--- Global Options
-vim.o.termguicolors = true
-vim.o.background = "dark"
-vim.o.syntax = "on"
-vim.o.completeopt = "menuone,noselect"
-vim.o.number = true
-vim.o.relativenumber = true
-
--- Local to Buffer
-vim.o.expandtab = true
-vim.o.shiftwidth = 2
-vim.o.softtabstop = 2
-
--- vim commands
-vim.cmd([[colorscheme base16-eighties]])
-
-vim.cmd[[highlight CursorLine term=bold cterm=bold guibg=Grey40]]
-
-vim.cmd([[
-    augroup fmt
-        autocmd!
-	autocmd BufWritePre * undojoin | Neoformat
-    augroup END
-]])
+require "user.options"
+require "user.whichkey"
+require "user.keymaps"
+require "user.plugins"
+require "user.colorscheme"
+require "user.cmp"
+require "user.lsp"
+require "user.telescope"
+require "user.treesitter"
+require "user.autopairs"
+require "user.comment"
+require "user.gitsigns"
+require "user.nvim-tree"
+require "user.bufferline"
+require "user.lualine"
+require "user.toggleterm"
+require "user.project"
+require "user.impatient"
+require "user.indentline"
+require "user.alpha"
+require "user.autocommands"
