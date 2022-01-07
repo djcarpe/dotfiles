@@ -1,7 +1,7 @@
 vim.cmd [[
 try
   set termguicolors
-  colorscheme one-monokai
+  colorscheme darkplus 
   set background=dark
 catch /^Vim\%((\a\+)\)\=:E185/
   colorscheme default
