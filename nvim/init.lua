@@ -1,7 +1,9 @@
+vim.opt.termguicolors = true
 require "user.options"
 require "user.whichkey"
 require "user.keymaps"
 require "user.plugins"
+require "user.colorizer"
 require "user.colorscheme"
 require "user.cmp"
 require "user.lsp"

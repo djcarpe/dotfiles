@@ -90,7 +90,7 @@ M.on_attach = function(client, bufnr)
   end
   if client.name == "elixirls" then
     client.fetchDeps = true
-    client.dialyzerEnabled = false
+    client.dialyzerEnabled = true
   end
   lsp_keymaps(bufnr)
   lsp_highlight_document(client)

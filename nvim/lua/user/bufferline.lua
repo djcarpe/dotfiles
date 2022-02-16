@@ -16,7 +16,7 @@ bufferline.setup {
     indicator_icon = " 🚀",
     buffer_close_icon = "",
     -- buffer_close_icon = '',
-    modified_icon = "●",
+    modified_icon = "❗",
     close_icon = "",
     -- close_icon = '',
     left_trunc_marker = "",
@@ -136,15 +136,15 @@ bufferline.setup {
 
     modified = {
       guifg = { attribute = "fg", highlight = "TabLine" },
-      guibg = { attribute = "bg", highlight = "TabLine" },
+      guibg = { attribute = "bg", highlight = "#fc7f03" },
     },
     modified_selected = {
       guifg = { attribute = "fg", highlight = "Normal" },
-      guibg = { attribute = "bg", highlight = "Normal" },
+      guibg = { attribute = "bg", highlight = "#fc7f03" },
     },
     modified_visible = {
       guifg = { attribute = "fg", highlight = "TabLine" },
-      guibg = { attribute = "bg", highlight = "TabLine" },
+      guibg = { attribute = "bg", highlight = "#fc7f03" },
     },
 
     separator = {

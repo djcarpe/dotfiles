@@ -1,0 +1,1 @@
+/Users/djcarpe/.fig/shell/post.fish

@@ -199,6 +199,11 @@ _G.packer_plugins = {
     path = "/Users/djcarpe/.local/share/nvim/site/pack/packer/start/nvim-cmp",
     url = "https://github.com/hrsh7th/nvim-cmp"
   },
+  ["nvim-colorizer.lua"] = {
+    loaded = true,
+    path = "/Users/djcarpe/.local/share/nvim/site/pack/packer/start/nvim-colorizer.lua",
+    url = "https://github.com/norcalli/nvim-colorizer.lua"
+  },
   ["nvim-lsp-installer"] = {
     loaded = true,
     path = "/Users/djcarpe/.local/share/nvim/site/pack/packer/start/nvim-lsp-installer",
@@ -278,6 +283,11 @@ _G.packer_plugins = {
     loaded = true,
     path = "/Users/djcarpe/.local/share/nvim/site/pack/packer/start/vim-bbye",
     url = "https://github.com/moll/vim-bbye"
+  },
+  ["vim-jsonnet"] = {
+    loaded = true,
+    path = "/Users/djcarpe/.local/share/nvim/site/pack/packer/start/vim-jsonnet",
+    url = "https://github.com/google/vim-jsonnet"
   },
   ["which-key.nvim"] = {
     loaded = true,
