@@ -1,0 +1,10 @@
+fac 42
+fac 43
+let fac n = if n == 0 then 1 else n * fac (n-1)
+"hello world!"
+close
+exit()
+exit
+a
+exit
+Prelud> "Hello, World!"
