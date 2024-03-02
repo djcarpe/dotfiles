@@ -1,0 +1,40 @@
+command_timeout = 5000
+add_newline = true
+
+[elixir]
+symbol = "🔮 "
+
+[character]                            # The name of the module we are configuring is "character"
+success_symbol = "🚀"     # The "success_symbol" segment is being set to "➜" with the color "bold green"
+error_symbol = "🔥"
+
+[gcloud]
+symbol = "️🇬️ "
+disabled = true
+[gcloud.region_aliases]
+us-east1 = "ue1"
+us-central1 = "uc1"
+asia-northeast1 = "an1"
+
+[aws]
+disabled = true
+
+# [kubernetes]
+# symbol =  "🛳️"
+# style = "cyan bold"
+# format = '[$symbol$context]($style) '
+# disabled = false
+# [kubernetes.context_aliases]
+# disabled = false
+# "*" = "dev 🛳️"
+
+[kubernetes]
+format = '[🚢 $context\($namespace\)](dimmed cyan bold) '
+disabled = false
+[kubernetes.context_aliases]
+# "pi-cluster" = "dev"
+"gke_.*_(?P<var_cluster>[\\w-]+)" = "influx dev "
+# [kubernetes.user_aliases]
+# "dev.local.cluster.k8s" = "dev"
+# "root/.*" = "root"
+
